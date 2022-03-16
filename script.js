@@ -68,15 +68,14 @@ Eingaben: Radius und Höhe der Flasche (Einheit: cm) (Annahme: Flaschen haben Zy
 Ausgaben: Liter, die in eine Flasche passen und die Menge an Flaschen, die man benötigt.
 Hinweis: Wenn du für die Volumenberechnung einer Flasche als Einheit Dezimeter verwendest dann erhältst du als Ergebnis dm3 (= Liter) */
 
-/* function flaschen(radius, hoehe, gewicht, liter) {
-    day = Math.floor(sec / (3600 * 24));
-    hour = Math.floor(sec % (3600 * 24) / 3600);
-    min = Math.floor(sec % 3600 / 60);
-    rest = Math.floor(sec % 60);
-    return (liter + " Liter passen in eine Flasche " + " und " + flasche + " Flasche braucht man dafür.");
+function flaschen(radius, hoehe, gewicht, liter) {
+    vol = Math.trunc(3, 14 * Math.pow(radius, 2) * hoehe / 4);
+    x = gewicht / liter;
+    flasche = Math.trunc(vol / x);
+    return ("<br> 6. <br>" + vol + " Liter passen in eine Flasche " + " und " + flasche + " Flasche braucht man dafür.");
 }
 
-document.write(flaschen(4, 15, 1, 770)); */
+document.write(flaschen(2, 15, 3, 770));
 
 /* 7. Berechnungen im Dreieck – Pythagoras
 Schreibe ein Programm, das die Hypotenuse eines rechtwinkeligen Dreiecks berechnet. 
