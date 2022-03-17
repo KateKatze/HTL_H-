@@ -71,7 +71,7 @@ Hinweis: Wenn du für die Volumenberechnung einer Flasche als Einheit Dezimeter 
 function flaschen(radius, hoehe, liter) {
     vol = Math.trunc(3, 14 * Math.pow(radius, 2) * hoehe / 4);
     flasche = Math.trunc(liter / vol);
-    return ("<br> 6. <br>" + vol + " Liter passen in eine Flasche " + " und " + flasche + " Flasche braucht man dafür.");
+    return ("<br> 6. <br>" + vol + " Liter passen in eine Flasche " + " und man braucht " + flasche + " Flaschen");
 }
 
 document.write(flaschen(2, 15, 770));
